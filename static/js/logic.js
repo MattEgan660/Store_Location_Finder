@@ -1,7 +1,7 @@
 // Use this link to get the geojson data.
 // var file = "static/data/organic_markets.json";
 var organic_file = "/Markets"
-var county_file = "/County"
+// var county_file = "/County"
 
 
 // Grabbing our GeoJSON data

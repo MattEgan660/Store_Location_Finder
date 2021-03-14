@@ -1,5 +1,5 @@
 // Creating map object
-var myMap = L.map("map", {
+var map2 = L.map("map2", {
     center: [39.0458, -76.6413],
     zoom: 8
 });
@@ -12,10 +12,10 @@ maxZoom: 18,
 zoomOffset: -1,
 id: "mapbox/streets-v11",
 accessToken: API_KEY
-}).addTo(myMap);
+}).addTo(map2);
 
 // Load in geojson data
-var county_file = "static/data/county_info.json"
+var county_file = "/County"
 
 var geojson;
 
@@ -49,7 +49,7 @@ d3.json(county_file, function(data) {
         layer.bindPopup("<h3>County: " + feature.properties.county_name + "</h3><br>Median Household Income:<br>" +
             "$" + feature.properties.median_household_income);
         }
-    }).addTo(myMap);
+    }).addTo(map2);
 
     // Set up the legend
     var legend = L.control({ position: "bottomright" });
@@ -77,6 +77,6 @@ d3.json(county_file, function(data) {
     };
 
     // Adding legend to the map
-    legend.addTo(myMap);
+    legend.addTo(map2);
 
 });
