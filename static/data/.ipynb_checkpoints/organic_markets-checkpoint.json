@@ -1,0 +1,136 @@
+{
+"type": "FeatureCollection",
+"features": [
+    {
+        "type": "Feature", "properties": {
+            "alias": "moms-organic-market-baltimore-8",
+            "store_name": "Mom's Organic Market",
+            "rating": 4.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.6309842014, 39.3362950015]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "moms-organic-market-timonium",
+            "store_name": "Mom's Organic Market",
+            "rating": 5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.6228368149, 39.4309523181]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "moms-organic-market-nottingham-2",
+            "store_name": "Mom's Organic Market",
+            "rating": 4.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.453512, 39.367671]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "mom-s-organic-market-jessup-2",
+            "store_name": "Mom's Organic Market",
+            "rating": 4.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.785194, 39.169474]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "ok-natural-foods-baltimore",
+            "store_name": "Ok Natural Food",
+            "rating": 4.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.6169891357, 39.304271698]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "sprouts-farmers-market-towson-2",
+            "store_name": "Sprouts Farmers Market",
+            "rating": 4.0
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.584403, 39.39763]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "whole-foods-market-baltimore",
+            "store_name": "Whole Foods",
+            "rating": 3.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.6498366, 39.3683778]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "sprouts-farmers-market-baltimore-2",
+            "store_name": "Sprouts Farmers Market",
+            "rating": 4.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.564266, 39.277394]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "the-natural-market-timonium-2",
+            "store_name": "The Natural Market",
+            "rating": 4.0
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.63067, 39.43875]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "whole-foods-market-baltimore-2",
+            "store_name": "Whole Foods Market",
+            "rating": 3.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.5994138, 39.2840361]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "whole-foods-market-baltimore-4",
+            "store_name": "Whole Foods Market",
+            "rating": 3.5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.5986864, 39.2824607381]
+        }
+    },
+    {
+        "type": "Feature", "properties": {
+            "alias": "818-market-catonsville-2",
+            "store_name": "Mom's Organic Market",
+            "rating": 5
+        },
+        "geometry": {
+            "type": "Point", "coordinates": [-76.734614, 39.27153]
+        }
+    }
+
+]
+
+}
+
+
+
+
+
+
+
+
+

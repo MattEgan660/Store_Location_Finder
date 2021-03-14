@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<title>Maryland Market Finder</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<head>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />>
+
+  <!--D3 cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <script src = "https://d3js.org/d3.v4.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#home" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#finder" class="w3-button w3-block w3-black">Maryland Counties</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#income" class="w3-button w3-block w3-black">Income View</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#population" class="w3-button w3-block w3-black">Population View</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min w3-mobile" id="home">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">MOM's Organic Market</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="container w3-mobile" id="finder">
+    <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MARYLAND MARKET SITE FINDER</span></h5>
+        <p>Find a new market site base on Maryland's current demographic data and competitor locations.</p>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="select_county">
+              <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Select County</span></h5>
+                <select class="w3-center" id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+        <!-- <div class="panel panel-primary"> -->
+          <!-- <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body">
+          </div>
+        </div> -->
+        </div>
+        
+        </div>
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5>
+        </div>
+
+        <div class="w3-container w3-mobile" id="map">
+            <div class="w3-content" style="max-width:700px">
+                <!-- <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5> -->
+                <div class="col-md-5">
+                <div id="map"></div>
+                <svg width="200" height="500">
+                  <rect x="0" y="0" width="50" height="50" />
+                </svg>
+                </div>
+            </div>
+        </div>
+    
+        <div class="w3-container w3-mobile" id="income">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Income View</span></h5>
+                <div class="col-md-5">
+                <div id="income"></div>
+                <svg width="200" height="500">
+                  <rect x="0" y="0" width="50" height="50" />
+                </svg>
+             </div>
+        </div>
+      </div>
+    </div>
+        <div class="w3-container w3-mobile" id="population">
+            <div class="w3-content" style="max-width:700px">
+                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Population View</span></h5>
+                <div class="col-md-5">
+                <div id="population"></div>
+                <svg width="200" height="400">
+                  <rect x="0" y="0" width="50" height="50" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div id="population"></div>
+      </div>
+    </div> -->
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+crossorigin=""></script>
+
+<!-- API key -->
+<script type="text/javascript" src="/static/js/config.js"></script>
+
+<!-- JS  -->
+<!-- <script type="text/javascript" src="app.js"></script> -->
+<script type="text/javascript" src="/static/js/logic.js"></script>
+
+
+</body>
+</html>
