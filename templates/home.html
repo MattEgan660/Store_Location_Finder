@@ -26,16 +26,16 @@
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
     <div class="w3-col s3">
-      <a href="#home" class="w3-button w3-block w3-black">HOME</a>
+      <a href="#finder" class="w3-button w3-block w3-black">Organic Store Locations</a>
     </div>
     <div class="w3-col s3">
-      <a href="#finder" class="w3-button w3-block w3-black">Maryland Counties</a>
+      <a href="#map2" class="w3-button w3-block w3-black">Income</a>
     </div>
     <div class="w3-col s3">
-      <a href="#income" class="w3-button w3-block w3-black">Income View</a>
+      <a href="#map3" class="w3-button w3-block w3-black">Population</a>
     </div>
     <div class="w3-col s3">
-      <a href="#population" class="w3-button w3-block w3-black">Population View</a>
+      <a href="#map4" class="w3-button w3-block w3-black">Household</a>
     </div>
   </div>
 </div>
@@ -57,19 +57,12 @@
         <p>Find a new market site base on Maryland's current demographic data and competitor locations.</p>
     </div>
     <div class="row">
-        <div class="col-md-2">
+        <!-- <div class="col-md-2">
             <div class="select_county">
               <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Select County</span></h5>
                 <select class="w3-center" id="selDataset" onchange="optionChanged(this.value)"></select>
             </div>
-        <!-- <div class="panel panel-primary"> -->
-          <!-- <div class="panel-heading">
-            <h3 class="panel-title">Demographic Info</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body">
-          </div>
         </div> -->
-        </div>
         
         </div>
             <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5>
@@ -77,11 +70,9 @@
 
         <div class="w3-container w3-mobile" id="map">
             <div class="w3-content" style="max-width:700px">
-                <!-- <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Map View</span></h5> -->
                 <div class="col-md-5">
                 <div id="map"></div>
                 <svg width="200" height="500">
-                  <rect x="0" y="0" width="50" height="50" />
                 </svg>
                 </div>
             </div>
@@ -93,32 +84,40 @@
     
         <div class="w3-container w3-mobile" id="map2">
             <div class="w3-content" style="max-width:700px">
-                <!-- <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Income View</span></h5> -->
                 <div class="col-md-5">
                 <div id="map2"></div>
                 <svg width="200" height="500">
-                  <rect x="0" y="0" width="50" height="50" />
                 </svg>
              </div>
         </div>
-      </div>
-    </div>
-        <div class="w3-container w3-mobile" id="population">
+
+        </div>
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Population View</span></h5>
+        </div>
+ 
+        <div class="w3-container w3-mobile" id="map3">
             <div class="w3-content" style="max-width:700px">
-                <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Population View</span></h5>
                 <div class="col-md-5">
-                <div id="population"></div>
+                <div id="map3"></div>
                 <svg width="200" height="400">
-                  <rect x="0" y="0" width="50" height="50" />
                 </svg>
             </div>
         </div>
+        
+        </div>
+            <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Household View</span></h5>
+        </div>
+
+        <div class="w3-container w3-mobile" id="map4">
+          <div class="w3-content" style="max-width:700px">
+              <div class="col-md-5">
+              <div id="map4"></div>
+              <svg width="200" height="400">
+              </svg>
+          </div>
+        </div>
     </div>
-    <!-- <div class="row">
-      <div class="col-md-12">
-        <div id="population"></div>
-      </div>
-    </div> -->
+
 </div>
 
 <!-- End page content -->
@@ -141,6 +140,8 @@ crossorigin=""></script>
 <!-- <script type="text/javascript" src="app.js"></script> -->
 <script type="text/javascript" src="/static/js/logic.js"></script>
 <script type="text/javascript" src="/static/js/logic2.js"></script>
+<script type="text/javascript" src="/static/js/logic3.js"></script>
+<script type="text/javascript" src="/static/js/logic4.js"></script>
 <script type="text/javascript" src="/static/js/choropleth.js"></script>
 
 </body>
