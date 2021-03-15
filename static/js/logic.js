@@ -83,29 +83,3 @@ function createMap(organic_markets){
 
 }
 
-function createMarkers(response) {
-
-  // Pull the "stations" property off of response.data
-  var stations = response.data.stations;
-
-  // Initialize an array to hold bike markers
-  var bikeMarkers = [];
-
-  // Loop through the stations array
-  for (var index = 0; index < stations.length; index++) {
-    var station = stations[index];
-
-    // For each station, create a marker and bind a popup with the station's name
-    var bikeMarker = L.marker([station.lat, station.lon])
-      .bindPopup("<h3>" + station.name + "<h3><h3>Capacity: " + station.capacity + "</h3>");
-
-    // Add the marker to the bikeMarkers array
-    bikeMarkers.push(bikeMarker);
-  }
-
-  // Create a layer group made from the bike markers array, pass it into the createMap function
-  createMap(L.layerGroup(bikeMarkers));
-}
-
-// [39.3343, -76.4394]
-//PLOtly - income and population call it by its id from html
