@@ -1,5 +1,5 @@
 // Creating map object
-var map2 = L.map("map2", {
+var map4 = L.map("map4", {
     center: [39.0458, -76.6413],
     zoom: 8
 });
@@ -13,7 +13,7 @@ minZoom: 6,
 zoomOffset: -1,
 id: "mapbox/streets-v11",
 accessToken: API_KEY
-}).addTo(map2);
+}).addTo(map4);
 
 // Load in geojson data
 var county_file = "/County"
@@ -28,10 +28,10 @@ d3.json(county_file, function(data) {
     geojson = L.choropleth(data, {
 
         // Define what  property in the features to use
-        valueProperty: "median_household_income",
+        valueProperty: "families",
 
         // Set color scale
-        scale: ["#ffffb2", "#b10026"],
+        scale: ["#16E8E8", "#0734A3"],
 
         // Number of breaks in step range
         steps: 10,
@@ -47,10 +47,9 @@ d3.json(county_file, function(data) {
 
         // Binding a pop-up to each layer
         onEachFeature: function(feature, layer) {
-        layer.bindPopup("<h3>County: " + feature.properties.county_name + "</h3><br>Median Household Income:<br>" +
-            "$" + feature.properties.median_household_income);
+        layer.bindPopup("<h3>County: " + feature.properties.county_name + "</h3><br>Number of Families:<br>" + feature.properties.families);
         }
-    }).addTo(map2);
+    }).addTo(map4);
 
     // Set up the legend
     var legend = L.control({ position: "bottomright" });
@@ -61,7 +60,7 @@ d3.json(county_file, function(data) {
         var labels = [];
 
         // Add min & max
-        var legendInfo = "<h1>Median Income</h1>" +
+        var legendInfo = "<h1>Number of Families</h1>" +
         "<div class=\"labels\">" +
             "<div class=\"min\">" + limits[0] + "</div>" +
             "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
@@ -78,6 +77,7 @@ d3.json(county_file, function(data) {
     };
 
     // Adding legend to the map
-    legend.addTo(map2);
+    legend.addTo(map4);
 
 });
+
